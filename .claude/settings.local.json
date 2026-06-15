@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git:*)",
+      "Bash(npx create-next-app@latest temp-next --typescript --tailwind --eslint --app --src=no --import-alias=\"@/*\" --yes)",
+      "Bash(cp -r temp-next/.gitignore temp-next/app temp-next/public temp-next/next.config.ts temp-next/next-env.d.ts temp-next/package.json temp-next/package-lock.json temp-next/postcss.config.mjs temp-next/tsconfig.json temp-next/node_modules .)",
+      "Bash(rm -rf temp-next)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(cd:*)",
+      "Bash(find 'C:/Users/johnf/Desktop/praxis-website-build March 30 2026/app' -name *.tsx -o -name *.ts)",
+      "Bash(find 'C:/Users/johnf/Desktop/praxis-website-build March 30 2026/components' -name *.tsx)",
+      "WebSearch"
+    ]
+  }
+}

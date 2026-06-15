@@ -1,0 +1,482 @@
+{
+  "_meta": {
+    "project": "Praxis Initiative Website",
+    "version": "1.0.0",
+    "created": "2026-03-30",
+    "description": "Design token system for the Praxis Initiative website rebuild. Implements a futuristic glassmorphism aesthetic anchored to brand colors Navy #000080 and Maroon #800000, with electric cyan and gold accents on deep-space dark backgrounds."
+  },
+
+  "color": {
+    "brand": {
+      "navy": {
+        "value": "#000080",
+        "usage": "Primary brand color. CTA buttons, primary headings, nav background active state."
+      },
+      "maroon": {
+        "value": "#800000",
+        "usage": "Secondary brand color. Accent headings, hover states, program card accents, tag backgrounds."
+      }
+    },
+    "background": {
+      "space": {
+        "value": "#00001A",
+        "usage": "Deepest background — primary page background base. Near-black with deep blue undertone."
+      },
+      "midnight": {
+        "value": "#050530",
+        "usage": "Section background panels. Alternating sections use this vs. space."
+      },
+      "void": {
+        "value": "#0A0020",
+        "usage": "Footer background, modal overlays."
+      },
+      "depth": {
+        "value": "#000010",
+        "usage": "Absolute darkest — used behind hero sections to maximize contrast."
+      }
+    },
+    "accent": {
+      "electric": {
+        "value": "#00D4FF",
+        "usage": "Cyan accent. Glass card borders (top edge highlight), data highlights, links on dark bg, icon strokes, stat numbers. High contrast on all navy/dark backgrounds."
+      },
+      "gold": {
+        "value": "#C9A227",
+        "usage": "Justice/honor accent. Quote marks, achievement callouts, award elements, highlight text. Warm contrast against navy."
+      },
+      "crimson": {
+        "value": "#FF4444",
+        "usage": "Alert/urgency accent. Impact statistics, urgent CTAs, important warnings. Use sparingly."
+      },
+      "electric-soft": {
+        "value": "#7FE9FF",
+        "usage": "Lighter cyan — secondary data labels, less prominent accents."
+      },
+      "gold-soft": {
+        "value": "#E8C97A",
+        "usage": "Lighter gold — secondary quote styling, softer highlight."
+      }
+    },
+    "glass": {
+      "frost-dark": {
+        "value": "rgba(5, 5, 48, 0.60)",
+        "usage": "Default glass card background. Use over dark backgrounds only."
+      },
+      "frost-navy": {
+        "value": "rgba(0, 0, 128, 0.15)",
+        "usage": "Navy-tinted glass card. Program cards, highlighted sections."
+      },
+      "frost-maroon": {
+        "value": "rgba(128, 0, 0, 0.15)",
+        "usage": "Maroon-tinted glass card. Urgent sections, featured callouts."
+      },
+      "frost-electric": {
+        "value": "rgba(0, 212, 255, 0.08)",
+        "usage": "Cyan-tinted glass. Data panels, stat blocks."
+      },
+      "border-default": {
+        "value": "rgba(255, 255, 255, 0.12)",
+        "usage": "Default glass card border. Subtle white translucency."
+      },
+      "border-highlight": {
+        "value": "rgba(0, 212, 255, 0.20)",
+        "usage": "Top border highlight on glass cards (creates a light-catching edge effect)."
+      },
+      "border-navy": {
+        "value": "rgba(0, 0, 255, 0.30)",
+        "usage": "Navy-accent glass border variant."
+      },
+      "border-gold": {
+        "value": "rgba(201, 162, 39, 0.25)",
+        "usage": "Gold-accent glass border. Quote blocks, achievement cards."
+      },
+      "inset-highlight": {
+        "value": "rgba(255, 255, 255, 0.08)",
+        "usage": "Inset box-shadow highlight on glass cards — simulates top-edge light refraction."
+      }
+    },
+    "text": {
+      "primary": {
+        "value": "#FFFFFF",
+        "usage": "Primary body text on dark backgrounds."
+      },
+      "secondary": {
+        "value": "#C0C0D0",
+        "usage": "Secondary/subdued text. Captions, meta information, supporting copy."
+      },
+      "muted": {
+        "value": "#8080A0",
+        "usage": "Muted text. Timestamps, fine print, disabled states."
+      },
+      "accent-electric": {
+        "value": "#00D4FF",
+        "usage": "Links and interactive text on dark backgrounds."
+      },
+      "accent-gold": {
+        "value": "#C9A227",
+        "usage": "Quote text color, highlighted figures."
+      },
+      "on-navy": {
+        "value": "#FFFFFF",
+        "usage": "Text rendered on navy (#000080) backgrounds."
+      },
+      "on-maroon": {
+        "value": "#FFFFFF",
+        "usage": "Text rendered on maroon (#800000) backgrounds."
+      }
+    },
+    "interactive": {
+      "button-primary-bg": {
+        "value": "#000080",
+        "usage": "Primary CTA button background."
+      },
+      "button-primary-hover": {
+        "value": "#0000B3",
+        "usage": "Primary CTA hover state (lighter navy)."
+      },
+      "button-secondary-bg": {
+        "value": "rgba(0, 0, 128, 0.20)",
+        "usage": "Secondary/outline button fill."
+      },
+      "button-secondary-border": {
+        "value": "#00D4FF",
+        "usage": "Secondary button border color."
+      },
+      "button-maroon-bg": {
+        "value": "#800000",
+        "usage": "Maroon variant button — urgent CTAs."
+      },
+      "button-maroon-hover": {
+        "value": "#A00000",
+        "usage": "Maroon button hover."
+      },
+      "focus-ring": {
+        "value": "#00D4FF",
+        "usage": "Keyboard focus ring color — meets accessibility requirements."
+      }
+    },
+    "gradient": {
+      "page-background": {
+        "value": "linear-gradient(135deg, #00001A 0%, #050530 40%, #0A0020 80%, #000010 100%)",
+        "usage": "Full-page background gradient. Applied to body."
+      },
+      "hero-overlay": {
+        "value": "linear-gradient(to bottom, rgba(0,0,10,0.3) 0%, rgba(0,0,26,0.7) 100%)",
+        "usage": "Overlay on hero photographic backgrounds to ensure text legibility."
+      },
+      "navy-to-space": {
+        "value": "linear-gradient(135deg, #000080 0%, #00001A 100%)",
+        "usage": "Section background variant — navy fading to space."
+      },
+      "maroon-to-space": {
+        "value": "linear-gradient(135deg, #800000 0%, #0A0020 100%)",
+        "usage": "Maroon section variant — urgent/highlight sections."
+      },
+      "electric-glow": {
+        "value": "radial-gradient(ellipse at 50% 0%, rgba(0, 212, 255, 0.15) 0%, transparent 70%)",
+        "usage": "Subtle top glow on glass cards and section tops."
+      },
+      "gold-glow": {
+        "value": "radial-gradient(ellipse at 50% 50%, rgba(201, 162, 39, 0.12) 0%, transparent 70%)",
+        "usage": "Centered gold ambient glow — quote sections."
+      }
+    }
+  },
+
+  "typography": {
+    "fontFamily": {
+      "display": {
+        "value": "'Space Grotesk', system-ui, sans-serif",
+        "usage": "H1, hero headlines, impact numbers."
+      },
+      "heading": {
+        "value": "'Space Grotesk', system-ui, sans-serif",
+        "usage": "H2–H6, section titles, card titles."
+      },
+      "body": {
+        "value": "'Plus Jakarta Sans', system-ui, sans-serif",
+        "usage": "Body text, descriptions, form inputs, navigation links."
+      },
+      "quote": {
+        "value": "'DM Serif Display', 'Georgia', serif",
+        "usage": "Pull quotes, testimonials, prominent quote blocks."
+      },
+      "mono": {
+        "value": "'JetBrains Mono', 'Courier New', monospace",
+        "usage": "Statistics, data figures, code snippets."
+      }
+    },
+    "fontSize": {
+      "xs": { "value": "0.75rem", "px": 12 },
+      "sm": { "value": "0.875rem", "px": 14 },
+      "base": { "value": "1rem", "px": 16 },
+      "lg": { "value": "1.125rem", "px": 18 },
+      "xl": { "value": "1.25rem", "px": 20 },
+      "2xl": { "value": "1.5rem", "px": 24 },
+      "3xl": { "value": "1.875rem", "px": 30 },
+      "4xl": { "value": "2.25rem", "px": 36 },
+      "5xl": { "value": "3rem", "px": 48 },
+      "6xl": { "value": "3.75rem", "px": 60 },
+      "7xl": { "value": "4.5rem", "px": 72 },
+      "8xl": { "value": "6rem", "px": 96 },
+      "hero": { "value": "clamp(2.5rem, 6vw, 5rem)", "usage": "Responsive hero headline" },
+      "stat": { "value": "clamp(3rem, 8vw, 6rem)", "usage": "Large impact statistics" },
+      "quote-large": { "value": "clamp(1.5rem, 3vw, 2.5rem)", "usage": "Large pull quotes" }
+    },
+    "fontWeight": {
+      "regular": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700,
+      "extrabold": 800
+    },
+    "lineHeight": {
+      "tight": 1.15,
+      "snug": 1.3,
+      "normal": 1.5,
+      "relaxed": 1.65,
+      "loose": 2.0
+    },
+    "letterSpacing": {
+      "tight": "-0.025em",
+      "normal": "0em",
+      "wide": "0.025em",
+      "wider": "0.05em",
+      "widest": "0.1em",
+      "label": "0.08em"
+    }
+  },
+
+  "spacing": {
+    "0": "0px",
+    "1": "4px",
+    "2": "8px",
+    "3": "12px",
+    "4": "16px",
+    "5": "20px",
+    "6": "24px",
+    "8": "32px",
+    "10": "40px",
+    "12": "48px",
+    "16": "64px",
+    "20": "80px",
+    "24": "96px",
+    "32": "128px",
+    "section-sm": "60px",
+    "section-md": "100px",
+    "section-lg": "140px",
+    "hero": "160px"
+  },
+
+  "borderRadius": {
+    "none": "0",
+    "sm": "4px",
+    "md": "8px",
+    "lg": "12px",
+    "xl": "16px",
+    "2xl": "24px",
+    "3xl": "32px",
+    "4xl": "40px",
+    "full": "9999px",
+    "card": "16px",
+    "button-primary": "9999px",
+    "button-secondary": "12px",
+    "badge": "9999px",
+    "hero-shape": "40px"
+  },
+
+  "boxShadow": {
+    "glass": "0 8px 32px rgba(0, 0, 128, 0.40), 0 0 0 1px rgba(0, 0, 128, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.08)",
+    "glass-hover": "0 16px 48px rgba(0, 0, 128, 0.55), 0 0 0 1px rgba(0, 212, 255, 0.20), inset 0 1px 0 rgba(255, 255, 255, 0.12)",
+    "glass-electric": "0 8px 32px rgba(0, 212, 255, 0.20), 0 0 0 1px rgba(0, 212, 255, 0.15)",
+    "glass-gold": "0 8px 32px rgba(201, 162, 39, 0.20), 0 0 0 1px rgba(201, 162, 39, 0.15)",
+    "button-navy": "0 4px 20px rgba(0, 0, 128, 0.50)",
+    "button-navy-hover": "0 8px 30px rgba(0, 0, 128, 0.70)",
+    "button-maroon": "0 4px 20px rgba(128, 0, 0, 0.50)",
+    "electric-glow": "0 0 20px rgba(0, 212, 255, 0.40), 0 0 60px rgba(0, 212, 255, 0.15)",
+    "text-shadow-hero": "0 2px 20px rgba(0, 0, 0, 0.80)",
+    "none": "none"
+  },
+
+  "backdropFilter": {
+    "glass-sm": "blur(10px) saturate(150%)",
+    "glass-md": "blur(20px) saturate(180%)",
+    "glass-lg": "blur(30px) saturate(200%)",
+    "glass-xl": "blur(40px) saturate(220%)"
+  },
+
+  "animation": {
+    "duration": {
+      "instant": "0ms",
+      "fast": "150ms",
+      "normal": "300ms",
+      "slow": "500ms",
+      "slower": "800ms",
+      "slowest": "1200ms"
+    },
+    "easing": {
+      "default": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "ease-in": "cubic-bezier(0.4, 0, 1, 1)",
+      "ease-out": "cubic-bezier(0, 0, 0.2, 1)",
+      "ease-in-out": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "spring": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+      "smooth": "cubic-bezier(0.25, 0.46, 0.45, 0.94)"
+    },
+    "framerMotion": {
+      "fadeUp": {
+        "initial": { "opacity": 0, "y": 30 },
+        "animate": { "opacity": 1, "y": 0 },
+        "transition": { "duration": 0.6, "ease": [0.25, 0.46, 0.45, 0.94] }
+      },
+      "fadeIn": {
+        "initial": { "opacity": 0 },
+        "animate": { "opacity": 1 },
+        "transition": { "duration": 0.5 }
+      },
+      "slideLeft": {
+        "initial": { "opacity": 0, "x": 40 },
+        "animate": { "opacity": 1, "x": 0 },
+        "transition": { "duration": 0.6 }
+      },
+      "slideRight": {
+        "initial": { "opacity": 0, "x": -40 },
+        "animate": { "opacity": 1, "x": 0 },
+        "transition": { "duration": 0.6 }
+      },
+      "scaleIn": {
+        "initial": { "opacity": 0, "scale": 0.9 },
+        "animate": { "opacity": 1, "scale": 1 },
+        "transition": { "duration": 0.5, "ease": [0.34, 1.56, 0.64, 1] }
+      },
+      "staggerChildren": {
+        "animate": { "transition": { "staggerChildren": 0.1, "delayChildren": 0.2 } }
+      },
+      "cardHover": {
+        "whileHover": {
+          "y": -6,
+          "transition": { "duration": 0.3, "ease": [0.25, 0.46, 0.45, 0.94] }
+        }
+      }
+    },
+    "threeJs": {
+      "heroParticles": {
+        "count": 2000,
+        "size": 0.003,
+        "colors": ["#000080", "#00D4FF", "#800000", "#C9A227"],
+        "speed": 0.0005,
+        "mouseReactivity": true,
+        "mobileDisabled": false,
+        "mobileParticleCount": 500
+      },
+      "heroGeometry": {
+        "type": "icosahedron",
+        "detail": 2,
+        "wireframe": true,
+        "color": "#000080",
+        "emissive": "#00D4FF",
+        "emissiveIntensity": 0.3,
+        "rotationSpeed": 0.002
+      }
+    }
+  },
+
+  "breakpoint": {
+    "xs": "375px",
+    "sm": "640px",
+    "md": "768px",
+    "lg": "1024px",
+    "xl": "1280px",
+    "2xl": "1440px",
+    "3xl": "1920px"
+  },
+
+  "zIndex": {
+    "base": 0,
+    "raised": 10,
+    "dropdown": 100,
+    "sticky": 200,
+    "overlay": 300,
+    "modal": 400,
+    "toast": 500,
+    "tooltip": 600
+  },
+
+  "component": {
+    "nav": {
+      "height": "72px",
+      "height-mobile": "64px",
+      "background-scrolled": "rgba(0, 0, 26, 0.90)",
+      "backdrop-filter-scrolled": "blur(20px) saturate(180%)",
+      "border-scrolled": "rgba(0, 212, 255, 0.10)"
+    },
+    "hero": {
+      "min-height": "100vh",
+      "min-height-mobile": "90vh"
+    },
+    "section": {
+      "max-width": "1280px",
+      "padding-x": "clamp(16px, 4vw, 80px)",
+      "padding-y": "clamp(60px, 8vw, 140px)"
+    },
+    "card": {
+      "padding": "32px",
+      "padding-mobile": "24px",
+      "gap": "24px"
+    },
+    "button": {
+      "height-sm": "36px",
+      "height-md": "44px",
+      "height-lg": "52px",
+      "padding-x-sm": "16px",
+      "padding-x-md": "24px",
+      "padding-x-lg": "32px",
+      "font-size": "0.9375rem",
+      "font-weight": 600,
+      "letter-spacing": "0.02em"
+    },
+    "quote-block": {
+      "quote-mark-size": "clamp(4rem, 10vw, 8rem)",
+      "quote-mark-color": "#C9A227",
+      "quote-mark-opacity": 0.4,
+      "text-size": "clamp(1.25rem, 2.5vw, 2rem)",
+      "text-color": "#FFFFFF",
+      "attribution-color": "#C9A227",
+      "border-left": "4px solid #C9A227"
+    },
+    "stat-counter": {
+      "number-font": "'JetBrains Mono', monospace",
+      "number-size": "clamp(2.5rem, 5vw, 4rem)",
+      "number-color": "#00D4FF",
+      "label-size": "0.875rem",
+      "label-color": "#C0C0D0",
+      "label-spacing": "0.1em"
+    }
+  },
+
+  "cssVariables": {
+    "_note": "Paste this block into :root in globals.css",
+    "--color-navy": "#000080",
+    "--color-maroon": "#800000",
+    "--color-space": "#00001A",
+    "--color-midnight": "#050530",
+    "--color-void": "#0A0020",
+    "--color-electric": "#00D4FF",
+    "--color-gold": "#C9A227",
+    "--color-crimson": "#FF4444",
+    "--color-white": "#FFFFFF",
+    "--color-text-secondary": "#C0C0D0",
+    "--color-text-muted": "#8080A0",
+    "--font-display": "'Space Grotesk', system-ui, sans-serif",
+    "--font-body": "'Plus Jakarta Sans', system-ui, sans-serif",
+    "--font-quote": "'DM Serif Display', Georgia, serif",
+    "--font-mono": "'JetBrains Mono', monospace",
+    "--glass-bg": "rgba(5, 5, 48, 0.60)",
+    "--glass-border": "rgba(255, 255, 255, 0.12)",
+    "--glass-border-top": "rgba(0, 212, 255, 0.20)",
+    "--glass-blur": "blur(20px) saturate(180%)",
+    "--glass-shadow": "0 8px 32px rgba(0, 0, 128, 0.40)",
+    "--radius-card": "16px",
+    "--radius-button": "9999px",
+    "--section-max-width": "1280px"
+  }
+}
