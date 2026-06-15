@@ -5,6 +5,7 @@ import {
   DM_Serif_Display,
   JetBrains_Mono,
 } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -79,6 +80,7 @@ export default function RootLayout({
           Skip to main content
         </a>
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
