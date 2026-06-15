@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Megaphone, Mail, Users, Share2, Newspaper } from "lucide-react";
+import Script from "next/script";
 import SectionHeader from "@/components/ui/SectionHeader";
 import GlassCard from "@/components/ui/GlassCard";
 import Button from "@/components/ui/Button";
@@ -73,13 +74,20 @@ export default function TakeActionContent() {
                   was stripped in a budget standoff. The office exists on paper.
                   Your signature helps make it exist in practice.
                 </p>
-                <div className="mt-auto rounded-xl border border-dashed border-[rgba(0,212,255,0.3)] bg-[rgba(0,212,255,0.05)] p-6 text-center">
-                  <p
-                    className="text-sm text-[#8080A0]"
-                    style={{ fontFamily: "var(--font-body)" }}
-                  >
-                    Action Network petition embed will appear here
-                  </p>
+                <div className="mt-auto overflow-hidden rounded-xl bg-white p-4">
+                  <link
+                    href="https://actionnetwork.org/css/style-embed-v3.css"
+                    rel="stylesheet"
+                    type="text/css"
+                  />
+                  <div
+                    id="can-petition-area-tell-governor-hobbs-attorney-general-kris-mayes-and-director-ryan-thornell-withdraw-the-jensen-appeal"
+                    style={{ width: "100%" }}
+                  ></div>
+                  <Script
+                    src="https://actionnetwork.org/widgets/v6/petition/tell-governor-hobbs-attorney-general-kris-mayes-and-director-ryan-thornell-withdraw-the-jensen-appeal?format=js&source=widget"
+                    strategy="lazyOnload"
+                  />
                 </div>
                 <div className="mt-4 flex gap-3">
                   <Button href="/donate" variant="cta" size="sm">
