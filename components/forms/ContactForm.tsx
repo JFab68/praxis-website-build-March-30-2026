@@ -44,11 +44,25 @@ export default function ContactForm() {
     resolver: zodResolver(contactSchema),
   });
 
-  const onSubmit = (data: ContactFormData) => {
-    console.log("Contact form submission:", data);
-    setSubmitted(true);
-    reset();
-    setTimeout(() => setSubmitted(false), 5000);
+  const onSubmit = async (data: ContactFormData) => {
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      setSubmitted(true);
+      reset();
+      setTimeout(() => setSubmitted(false), 5000);
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("There was an error sending your message. Please try again later.");
+    }
   };
 
   return (

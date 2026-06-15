@@ -46,10 +46,24 @@ export default function VolunteerForm() {
     },
   });
 
-  const onSubmit = (data: VolunteerFormData) => {
-    console.log("Volunteer form submitted:", data);
-    setSubmitted(true);
-    reset();
+  const onSubmit = async (data: VolunteerFormData) => {
+    try {
+      const response = await fetch("/api/volunteer", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit volunteer form");
+      }
+
+      setSubmitted(true);
+      reset();
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("There was an error sending your volunteer interest. Please try again later.");
+    }
   };
 
   if (submitted) {

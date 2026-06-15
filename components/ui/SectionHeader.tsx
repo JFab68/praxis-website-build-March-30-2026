@@ -8,6 +8,7 @@ interface SectionHeaderProps {
   subtitle?: string;
   align?: "left" | "center";
   className?: string;
+  id?: string;
 }
 
 export default function SectionHeader({
@@ -15,9 +16,11 @@ export default function SectionHeader({
   subtitle,
   align = "center",
   className,
+  id,
 }: SectionHeaderProps) {
   return (
     <motion.div
+      id={id}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
