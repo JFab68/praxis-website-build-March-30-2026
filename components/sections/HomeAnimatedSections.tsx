@@ -157,26 +157,25 @@ export function WhoWeAre() {
             </div>
           </FadeIn>
 
-          {/* Photo placeholder */}
           <FadeIn delay={0.15}>
-            <div className="glass-card flex aspect-[4/3] items-center justify-center p-8">
-              <div className="text-center">
-                <svg
-                  className="mx-auto mb-4 h-16 w-16 text-[#8080A0]"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={1}
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
-                </svg>
-                <p className="text-sm text-[#8080A0]" style={{ fontFamily: "var(--font-body)" }}>
-                  Team photo — client to provide
+            <div className="glass-card-navy flex h-full flex-col justify-center p-8 md:p-12 relative overflow-hidden">
+              <div
+                className="pointer-events-none absolute right-0 top-0 h-64 w-64 rounded-bl-full opacity-10"
+                style={{ background: "radial-gradient(circle, #00D4FF 0%, transparent 70%)" }}
+                aria-hidden="true"
+              />
+              <span className="mb-6 block text-6xl font-serif text-electric opacity-40 leading-none">
+                "
+              </span>
+              <p
+                className="text-[clamp(1.5rem,2.5vw,2rem)] font-medium leading-snug text-white italic"
+                style={{ fontFamily: "var(--font-quote)" }}
+              >
+                Theory made action — knowledge that transforms reality through practice.
+              </p>
+              <div className="mt-8 pt-6 border-t border-[rgba(0,212,255,0.2)]">
+                <p className="text-sm font-bold uppercase tracking-wider text-electric" style={{ fontFamily: "var(--font-display)" }}>
+                  Our Mandate
                 </p>
               </div>
             </div>
